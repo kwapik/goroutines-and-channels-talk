@@ -1,0 +1,13 @@
+Goroutines and channels - simple, but powerful tools in Go arsenal
+15 mar 2016
+
+Krzysztof Kwapisiewicz, Software Developer, CodiLime
+krzysztof.kwapisiewicz@codilime.com
+github.com/kwapik
+@kwapik
+
+* References
+
+- [[https://www.youtube.com/watch?v=f6kdp27TYZs]["Go Concurrency Patterns"]] by Rob Pike
+- [[https://golang.org/doc/effective_go.html#concurrency][Effective Go]]
+- 1 year of relationship with Gopher
