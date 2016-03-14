@@ -1,7 +1,7 @@
 Goroutines and channels - simple, but powerful tools in Go arsenal
 15 mar 2016
 
-Krzysztof Kwapisiewicz, Software Developer, CodiLime
+Krzysztof Kwapisiewicz, Software Developer at CodiLime
 krzysztof.kwapisiewicz@codilime.com
 github.com/kwapik
 @kwapik
@@ -11,3 +11,27 @@ github.com/kwapik
 - [[https://www.youtube.com/watch?v=f6kdp27TYZs]["Go Concurrency Patterns"]] by Rob Pike
 - [[https://golang.org/doc/effective_go.html#concurrency][Effective Go]]
 - 1 year of relationship with Gopher
+
+* Goroutines
+
+Independently executing function, launched by a Go statement.
+
+Has own call stack which grows and shrinks as required.
+
+Very cheap. Do not be afraid to run 5 digit number of them.
+
+Multiplexed onto multiple OS thread.
+
+* Goroutines - simple_example
+
+.play examples/goroutines_simple.go /START OMIT/,/END OMIT/
+
+* Goroutines - hotfix/simple_example
+
+.play examples/goroutines_simple_fixed.go /START OMIT/,/END OMIT/
+
+* Goroutines - simple_example TODO
+
+Waiting is not very reliable way to ensure goroutine finished all important stuff.
+
+We want to exchange information.
