@@ -17,12 +17,11 @@ func main() {
 	go func() { cheerChannel(c2, "Hello!") }()
 
 	for {
-		select {
-		case msg := <-c1:
-			fmt.Println(msg)
-		case msg := <-c2:
-			fmt.Println(msg)
-		}
+		var msg string
+		msg = <-c1
+		fmt.Println(msg)
+		msg = <-c2
+		fmt.Println(msg)
 	}
 }
 

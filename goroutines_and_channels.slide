@@ -55,29 +55,41 @@ Provide connection between goroutines so they can communicate.
 .code examples/channels_simple.go /START OMIT/,/END OMIT/
 .code examples/channels_buffered.go /START OMIT/,/END OMIT/
 
-* Channels - synchronization
+* Synchronization
 
 .play examples/channels_synchronization.go /START OMIT/,/END OMIT/
 
-* Channels - multiple channels
+* Multiple channels
+
+.play examples/channels_multiple.go /START OMIT/,/END OMIT/
+
+* Multiple channels with select
 
 .play examples/channels_select.go /START OMIT/,/END OMIT/
 
-* Channels - timeout single operation
+* Timeout single operation
 
 .play examples/timeout.go /START OMIT/,/END OMIT/
 
-* Channels - timeout all operations
+* Timeout all operations
 
 .play examples/timeout_all.go /START OMIT/,/END OMIT/
 
-* Production example
+* Unlimited workers
 
 .play examples/workers.go /START OMIT/,/END OMIT/
 
-* Limited number of goroutines
+* Limited workers
 
 .play examples/workers_limited.go /START OMIT/,/END OMIT/
+
+* Results
+
+.play examples/workers_results.go /START OMIT/,/END OMIT/
+
+* Killing result reader
+
+.play examples/workers_kill.go /START OMIT/,/END OMIT/
 
 * How fast it can go?
 
