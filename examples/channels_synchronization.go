@@ -10,9 +10,18 @@ import (
 
 // START OMIT
 func main() {
-	go cheer("Yay! I'm a goroutine!")
-	time.Sleep(time.Second) // HL
+	c := make(chan int)
+
+	go func() {
+		cheer("Yay! I'm a goroutine!")
+		c <- 1 // HL
+	}()
+
+	<-c // HL
+	fmt.Println("Bye!")
 }
+
+// END OMIT
 
 func cheer(msg string) {
 	for i := 0; i < 5; i++ {
@@ -20,5 +29,3 @@ func cheer(msg string) {
 		time.Sleep(time.Duration(rand.Intn(1e3)) * time.Millisecond)
 	}
 }
-
-// END OMIT

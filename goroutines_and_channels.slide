@@ -1,16 +1,24 @@
 Goroutines and channels - simple, but powerful tools in Go arsenal
 15 mar 2016
 
+* About me
+
 Krzysztof Kwapisiewicz, Software Developer at CodiLime
+
 krzysztof.kwapisiewicz@codilime.com
-github.com/kwapik
 @kwapik
+
+github.com/kwapik/goroutines-and-channels-talk
+
+.image img/codilime.jpg 200 _
 
 * References
 
 - [[https://www.youtube.com/watch?v=f6kdp27TYZs]["Go Concurrency Patterns"]] by Rob Pike
 - [[https://golang.org/doc/effective_go.html#concurrency][Effective Go]]
 - 1 year of relationship with Gopher
+
+.image img/gopher.png 200 _
 
 * Goroutines
 
@@ -21,6 +29,10 @@ Has own call stack which grows and shrinks as required.
 Very cheap. Do not be afraid to run 5 digit number of them.
 
 Multiplexed onto multiple OS thread.
+
+* Life without goroutines
+
+.play examples/no_goroutines.go /START OMIT/,/END OMIT/
 
 * Goroutines - simple_example
 
@@ -35,3 +47,42 @@ Multiplexed onto multiple OS thread.
 Waiting is not very reliable way to ensure goroutine finished all important stuff.
 
 We want to exchange information.
+
+* Channels
+
+Provide connection between goroutines so they can communicate.
+
+.code examples/channels_simple.go /START OMIT/,/END OMIT/
+.code examples/channels_buffered.go /START OMIT/,/END OMIT/
+
+* Channels - synchronization
+
+.play examples/channels_synchronization.go /START OMIT/,/END OMIT/
+
+* Channels - multiple channels
+
+.play examples/channels_select.go /START OMIT/,/END OMIT/
+
+* Channels - timeout single operation
+
+.play examples/timeout.go /START OMIT/,/END OMIT/
+
+* Channels - timeout all operations
+
+.play examples/timeout_all.go /START OMIT/,/END OMIT/
+
+* Production example
+
+.play examples/workers.go /START OMIT/,/END OMIT/
+
+* Limited number of goroutines
+
+.play examples/workers_limited.go /START OMIT/,/END OMIT/
+
+* How fast it can go?
+
+.image img/whisper.jpg
+
+* How fast it can go? - code
+
+.play examples/whisper.go /START OMIT/,/END OMIT/

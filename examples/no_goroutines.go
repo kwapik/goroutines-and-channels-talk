@@ -10,8 +10,7 @@ import (
 
 // START OMIT
 func main() {
-	go cheer("Yay! I'm a goroutine!")
-	time.Sleep(time.Second) // HL
+	cheer("Yay! I'm a function!") // HL
 }
 
 func cheer(msg string) {
